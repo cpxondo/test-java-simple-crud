@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: simple-crud
+  datasource:
+    platform: h2
+    url: 'jdbc:h2:mem:db;DB_CLOSE_DELAY=-1'
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    validation-query: SELECT 1
+    time-between-eviction-runs-millis: 14400000
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 8085
