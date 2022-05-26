@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -15,9 +16,11 @@ public class SimpleService {
     private final Logger log =  LoggerFactory.getLogger(getClass());
 
     private final SimpleRepository repository;
+    private final PDFGenerator generator;
 
-    public SimpleService(SimpleRepository repository) {
+    public SimpleService(SimpleRepository repository, PDFGenerator generator) {
         this.repository = repository;
+        this.generator = generator;
     }
 
     public List<SimpleEntity> getAll() {
@@ -64,5 +67,14 @@ public class SimpleService {
             result = Optional.of(aux);
         }
         return result;
+    }
+
+    public ByteArrayInputStream getReportAll() {
+        log.info("getReportAll");
+
+        List<SimpleEntity> customers = this.getAll();
+
+        return generator.createReport(customers);
+
     }
 }
