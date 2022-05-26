@@ -1,9 +1,10 @@
-package com.test.simple.crud.simplecrud;
+package com.test.simple.crud.simplecrud.utils;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.test.simple.crud.simplecrud.crud.SimpleEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

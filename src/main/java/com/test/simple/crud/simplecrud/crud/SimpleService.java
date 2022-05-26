@@ -1,5 +1,6 @@
-package com.test.simple.crud.simplecrud;
+package com.test.simple.crud.simplecrud.crud;
 
+import com.test.simple.crud.simplecrud.utils.PDFGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

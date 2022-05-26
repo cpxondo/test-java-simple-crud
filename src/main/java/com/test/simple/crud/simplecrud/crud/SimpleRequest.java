@@ -1,4 +1,4 @@
-package com.test.simple.crud.simplecrud;
+package com.test.simple.crud.simplecrud.crud;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonProcessingException;

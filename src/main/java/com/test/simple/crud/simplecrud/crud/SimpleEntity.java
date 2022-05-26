@@ -1,4 +1,4 @@
-package com.test.simple.crud.simplecrud;
+package com.test.simple.crud.simplecrud.crud;
 
 import javax.persistence.*;
 
